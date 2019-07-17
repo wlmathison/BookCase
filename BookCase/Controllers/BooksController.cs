@@ -9,6 +9,7 @@ using BookCase.Data;
 using BookCase.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using BookCase.Models.ViewModels;
 
 namespace BookCase.Controllers
 {
@@ -54,12 +55,14 @@ namespace BookCase.Controllers
         }
 
         // GET: Books/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["AuthorId"] = new SelectList(_context.Authors, "Id", "FirstName");
-            ViewData["GenreId"] = new SelectList(_context.Genres, "Id", "Name");
-            ViewData["OwnerId"] = new SelectList(_context.User, "Id", "Id");
-            return View();
+            var viewModel = new BookCreateViewModel
+            {
+                AvailableAuthors = await _context.Authors.ToListAsync(),
+                AvailableGenres = await _context.Genres.ToListAsync()
+            };
+            return View(viewModel);
         }
 
         // POST: Books/Create
