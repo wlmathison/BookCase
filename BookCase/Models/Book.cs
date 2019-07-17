@@ -26,7 +26,7 @@ namespace BookCase.Models
         [Required]
         public Genre Genre { get; set; }
         [Required]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = false, DataFormatString = "{0:MM/dd/yyyy}")]
         [Display(Name = "Published On")]
         public DateTime DatePublished { get; set; }
         [Required]
