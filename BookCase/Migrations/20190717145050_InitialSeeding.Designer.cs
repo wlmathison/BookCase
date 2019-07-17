@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookCase.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190716203742_Initial")]
-    partial class Initial
+    [Migration("20190717145050_InitialSeeding")]
+    partial class InitialSeeding
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -95,7 +95,7 @@ namespace BookCase.Migrations
                         {
                             Id = 1,
                             AuthorId = 1,
-                            DatePublished = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(14),
+                            DatePublished = new DateTime(1986, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GenreId = 1,
                             ISBN = "0670813028",
                             OwnerId = "00000000-ffff-ffff-ffff-ffffffffffff",
@@ -105,7 +105,7 @@ namespace BookCase.Migrations
                         {
                             Id = 2,
                             AuthorId = 2,
-                            DatePublished = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(10),
+                            DatePublished = new DateTime(1953, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GenreId = 2,
                             ISBN = "9780743247221",
                             OwnerId = "00000000-ffff-ffff-ffff-ffffffffffff",
@@ -115,7 +115,7 @@ namespace BookCase.Migrations
                         {
                             Id = 3,
                             AuthorId = 3,
-                            DatePublished = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1934),
+                            DatePublished = new DateTime(1934, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GenreId = 3,
                             ISBN = "9780062693662",
                             OwnerId = "00000000-ffff-ffff-ffff-ffffffffffff",
@@ -343,13 +343,13 @@ namespace BookCase.Migrations
                         {
                             Id = "00000000-ffff-ffff-ffff-ffffffffffff",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9d3cbdef-f3b8-4a84-8fea-cc0c01cb0e4b",
+                            ConcurrencyStamp = "9636f1ea-b281-4bff-b93a-a0f2afa0c46c",
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEA3B0bEzeuJvFG5q6hyb4KGerqKO8Bv/+Fwn32eJuUs24OKqbDaUnFHRLU70IAbNcg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDVBmDe8z2k9lY4ezqPqgeGouHuUBiRAFg5n8wouQGI0s1lR/5SF+TZT7gJJogfDnw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "7f434309-a4d9-48e9-9ebb-8803db794577",
                             TwoFactorEnabled = false,

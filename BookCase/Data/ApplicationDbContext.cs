@@ -88,7 +88,7 @@ namespace BookCase.Data
                     Title = "It",
                     AuthorId = 1,
                     GenreId = 1,
-                    DatePublished = new DateTime(1986 / 09 / 15),
+                    DatePublished = new DateTime(1986, 09, 15),
                     OwnerId = user.Id
                 },
                 new Book()
@@ -98,7 +98,7 @@ namespace BookCase.Data
                     Title = "Fahrenheit 451",
                     AuthorId = 2,
                     GenreId = 2,
-                    DatePublished = new DateTime(1953 / 10 / 19),
+                    DatePublished = new DateTime(1953, 10, 19),
                     OwnerId = user.Id
                 },
                 new Book()
@@ -108,7 +108,7 @@ namespace BookCase.Data
                     Title = "Murder on the Orient Express",
                     AuthorId = 3,
                     GenreId = 3,
-                    DatePublished = new DateTime(1934 / 1 / 1),
+                    DatePublished = new DateTime(1934, 1, 1),
                     OwnerId = user.Id
                 }
             );

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BookCase.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialSeeding : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -229,7 +229,7 @@ namespace BookCase.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "FirstName", "LastName" },
-                values: new object[] { "00000000-ffff-ffff-ffff-ffffffffffff", 0, "9d3cbdef-f3b8-4a84-8fea-cc0c01cb0e4b", "ApplicationUser", "admin@admin.com", true, false, null, "ADMIN@ADMIN.COM", "ADMIN@ADMIN.COM", "AQAAAAEAACcQAAAAEA3B0bEzeuJvFG5q6hyb4KGerqKO8Bv/+Fwn32eJuUs24OKqbDaUnFHRLU70IAbNcg==", null, false, "7f434309-a4d9-48e9-9ebb-8803db794577", false, "admin@admin.com", "admin", "admin" });
+                values: new object[] { "00000000-ffff-ffff-ffff-ffffffffffff", 0, "9636f1ea-b281-4bff-b93a-a0f2afa0c46c", "ApplicationUser", "admin@admin.com", true, false, null, "ADMIN@ADMIN.COM", "ADMIN@ADMIN.COM", "AQAAAAEAACcQAAAAEDVBmDe8z2k9lY4ezqPqgeGouHuUBiRAFg5n8wouQGI0s1lR/5SF+TZT7gJJogfDnw==", null, false, "7f434309-a4d9-48e9-9ebb-8803db794577", false, "admin@admin.com", "admin", "admin" });
 
             migrationBuilder.InsertData(
                 table: "Authors",
@@ -254,17 +254,17 @@ namespace BookCase.Migrations
             migrationBuilder.InsertData(
                 table: "Books",
                 columns: new[] { "Id", "AuthorId", "DatePublished", "GenreId", "ISBN", "OwnerId", "Title" },
-                values: new object[] { 1, 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(14), 1, "0670813028", "00000000-ffff-ffff-ffff-ffffffffffff", "It" });
+                values: new object[] { 1, 1, new DateTime(1986, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "0670813028", "00000000-ffff-ffff-ffff-ffffffffffff", "It" });
 
             migrationBuilder.InsertData(
                 table: "Books",
                 columns: new[] { "Id", "AuthorId", "DatePublished", "GenreId", "ISBN", "OwnerId", "Title" },
-                values: new object[] { 2, 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(10), 2, "9780743247221", "00000000-ffff-ffff-ffff-ffffffffffff", "Fahrenheit 451" });
+                values: new object[] { 2, 2, new DateTime(1953, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "9780743247221", "00000000-ffff-ffff-ffff-ffffffffffff", "Fahrenheit 451" });
 
             migrationBuilder.InsertData(
                 table: "Books",
                 columns: new[] { "Id", "AuthorId", "DatePublished", "GenreId", "ISBN", "OwnerId", "Title" },
-                values: new object[] { 3, 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified).AddTicks(1934), 3, "9780062693662", "00000000-ffff-ffff-ffff-ffffffffffff", "Murder on the Orient Express" });
+                values: new object[] { 3, 3, new DateTime(1934, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, "9780062693662", "00000000-ffff-ffff-ffff-ffffffffffff", "Murder on the Orient Express" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
